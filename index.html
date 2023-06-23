@@ -27,7 +27,6 @@
     }
 
     main {
-      margin-left: 220px;
       padding: 20px;
     }
   </style>
@@ -37,9 +36,9 @@
       var sections = document.getElementsByTagName('section');
       for (var i = 0; i < sections.length; i++) {
         if (sections[i].id === sectionId) {
-          sections[i].classList.remove('hidden');
+          sections[i].style.display = 'block';
         } else {
-          sections[i].classList.add('hidden');
+          sections[i].style.display = 'none';
         }
       }
     }
@@ -60,11 +59,11 @@
       <h2>About Me</h2>
       <!-- Content for about section goes here -->
     </section>
-    <section id="projects" class="hidden">
+    <section id="projects" style="display: none;">
       <h2>Projects</h2>
       <!-- Content for projects section goes here -->
     </section>
-    <section id="contact" class="hidden">
+    <section id="contact" style="display: none;">
       <h2>Contact</h2>
       <!-- Content for contact section goes here -->
     </section>
