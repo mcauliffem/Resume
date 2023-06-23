@@ -31,14 +31,27 @@
       padding: 20px;
     }
   </style>
+  <script>
+    // JavaScript code to toggle section visibility
+    function showSection(sectionId) {
+      var sections = document.getElementsByTagName('section');
+      for (var i = 0; i < sections.length; i++) {
+        if (sections[i].id === sectionId) {
+          sections[i].classList.remove('hidden');
+        } else {
+          sections[i].classList.add('hidden');
+        }
+      }
+    }
+  </script>
 </head>
 <body>
   <header>
     <nav>
       <ul>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#about">About Me</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#" onclick="showSection('projects')">Projects</a></li>
+        <li><a href="#" onclick="showSection('about')">About Me</a></li>
+        <li><a href="#" onclick="showSection('contact')">Contact</a></li>
       </ul>
     </nav>
   </header>
@@ -47,11 +60,11 @@
       <h2>Projects</h2>
       <!-- Content for projects section goes here -->
     </section>
-    <section id="about">
+    <section id="about" class="hidden">
       <h2>About Me</h2>
       <!-- Content for about section goes here -->
     </section>
-    <section id="contact">
+    <section id="contact" class="hidden">
       <h2>Contact</h2>
       <!-- Content for contact section goes here -->
     </section>
