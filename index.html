@@ -84,6 +84,24 @@
       align-items: center;
       justify-content: center;
     }
+
+    .profile-photo {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      border: 2px solid #333;
+      background-color: #ddd;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .profile-photo img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: cover;
+    }
   </style>
   <script>
     // JavaScript code to toggle section visibility
@@ -185,8 +203,15 @@
     <section id="contact" style="display: none;">
       <div class="contactinfo">
         <h2>Contact Me</h2>
+        <!-- Add a Photo of myself -->
+        <div class="profile-photo">
+          <!-- Placeholder content or actual photo goes here -->
+          <img src="pfp.jpeg" alt="Profile Photo">
+        </div>
+        <!-- Add a phone number -->
+        <!-- Add an email address -->
+        <!-- Add my LI link -->
       </div>
-      <!-- Content for contact section goes here -->
     </section>
   </main>
 </body>
