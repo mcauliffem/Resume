@@ -69,16 +69,6 @@
     .content {
       margin-left: 220px;
     }
-
-    #pdf-container {
-      width: 100%;
-    }
-
-    #pdf-container embed {
-      display: block;
-      width: 100%;
-      height: 100%;
-    }
   </style>
   <script>
     // JavaScript code to toggle section visibility
@@ -111,17 +101,6 @@
       }
     }
   </script>
-  <script>
-    window.addEventListener('DOMContentLoaded', function() {
-      var embedElement = document.querySelector('#pdf-container embed');
-
-      // Adjust height once the PDF is loaded
-      embedElement.addEventListener('load', function() {
-        var pdfHeight = embedElement.contentDocument.documentElement.scrollHeight;
-        embedElement.style.height = pdfHeight + 'px';
-      });
-    });
-  </script>
 </head>
 <body>
   <header>
@@ -146,9 +125,7 @@
       <div class="content">
         <section id="resume">
           <h2>Resume</h2>
-            <div id="pdf-container">
-              <embed src="Matt A McAuliffe Resume.pdf" width="100%" type="application/pdf">
-            </div>
+              <embed src="Matt A McAuliffe Resume.pdf" width="100%" height="1000px" type="application/pdf">
         </section>
         <section id="education" style="display: none;">
           <h2>Education</h2>
