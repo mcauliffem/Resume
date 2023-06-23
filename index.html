@@ -38,6 +38,37 @@
     main {
       padding: 20px;
     }
+
+    .sidebar {
+      background: #f1f1f1;
+      width: 200px;
+      float: left;
+    }
+
+    .sidebar ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .sidebar ul li {
+      margin-bottom: 10px;
+    }
+
+    .sidebar ul li a {
+      display: block;
+      color: #333;
+      padding: 10px;
+      text-decoration: none;
+    }
+
+    .sidebar ul li a:hover {
+      background: #ddd;
+    }
+
+    .content {
+      margin-left: 220px;
+    }
   </style>
   <script>
     // JavaScript code to toggle section visibility
@@ -48,6 +79,22 @@
           sections[i].style.display = 'block';
         } else {
           sections[i].style.display = 'none';
+        }
+      }
+    }
+
+    const nonSubSections = ['about', 'projects', 'contact']
+
+    // JavaScript code to toggle subsection visibility
+    function showSubSection(subsectionId) {
+      var sections = document.getElementsByTagName('section');
+      for (var i = 0; i < sections.length; i ++) {
+        if (sections[i].id === subsectionId) {
+          sections[i].style.display = 'block';
+        } else {
+          if (nonSubSections.indexOf(sections[i]) < 0) {
+            sections[i].style.display = 'none';
+          }
         }
       }
     }
@@ -65,8 +112,28 @@
   </header>
   <main>
     <section id="about">
-      <h2>About Me</h2>
-      <!-- Content for about section goes here -->
+      <div class="sidebar">
+        <ul>
+          <li><a href="#" onclick="showSubSection('resume')">Resume</a></li>
+          <li><a href="#" onclick="showSubSection('education')">Education</a></li>
+          <li><a href="#" onclick="showSubSection('interests')">Interests</a></li>
+          <li><a href="#" onclick="showSubSection('involvement')">Involvement</a></li>
+        </ul>
+      </div>
+      <div class="content">
+        <section id="resume">
+          <h2>Resume</h2>
+          <!-- Content for the Resume section goes here -->
+        </section>
+        <section id="education" style="display: none;">
+          <h2>Education</h2>
+          <!-- Content for the Education section goes here -->
+        </section>
+        <section id="Interests" style="display: none;">
+          <h2>Interests</h2>
+          <!-- Content for the Interests section goes here -->
+        </section>
+      </div>
     </section>
     <section id="projects" style="display: none;">
       <h2>Projects</h2>
