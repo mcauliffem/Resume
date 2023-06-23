@@ -78,7 +78,9 @@
         if (sections[i].id === sectionId) {
           sections[i].style.display = 'block';
         } else {
-          sections[i].style.display = 'none';
+          if (nonSubSections.indexOf(sections[i].id) > -1) {
+            sections[i].style.display = 'none';
+          }
         }
       }
     }
