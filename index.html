@@ -92,7 +92,7 @@
         if (sections[i].id === subsectionId) {
           sections[i].style.display = 'block';
         } else {
-          if (nonSubSections.indexOf(sections[i]) < 0) {
+          if (nonSubSections.indexOf(sections[i].id) < 0) {
             sections[i].style.display = 'none';
           }
         }
@@ -129,9 +129,13 @@
           <h2>Education</h2>
           <!-- Content for the Education section goes here -->
         </section>
-        <section id="Interests" style="display: none;">
+        <section id="interests" style="display: none;">
           <h2>Interests</h2>
           <!-- Content for the Interests section goes here -->
+        </section>
+        <section id="involvement" style="display: none;">
+          <h2>Involvement</h2>
+          <!-- Content for the Involvement section goes here -->
         </section>
       </div>
     </section>
