@@ -472,9 +472,117 @@ section.alt {
 
 /* ---------- Projects ---------- */
 
+.project-feature {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 36px;
+  box-shadow: var(--shadow);
+  margin-bottom: 28px;
+}
+
+.project-feature-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.project-feature h3 {
+  margin: 0 0 4px;
+  font-size: 1.35rem;
+  color: var(--navy);
+}
+
+.project-tagline {
+  margin: 0;
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.project-badge {
+  flex-shrink: 0;
+  background: var(--accent-soft);
+  color: #1e40af;
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 7px 14px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.project-description {
+  color: var(--ink-soft);
+  font-size: 1rem;
+  max-width: 760px;
+  margin: 0 0 24px;
+}
+
+.project-highlights {
+  list-style: none;
+  margin: 0 0 24px;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px 32px;
+}
+
+.project-highlights li {
+  color: var(--ink-soft);
+  font-size: 0.92rem;
+  padding-left: 20px;
+  position: relative;
+}
+
+.project-highlights li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.project-highlights strong {
+  color: var(--navy);
+}
+
+.project-highlights code,
+.project-description code {
+  background: var(--bg-alt);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 1px 5px;
+  font-size: 0.88em;
+}
+
+.tech-tags {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tech-tags li {
+  background: var(--bg-alt);
+  border: 1px solid var(--line);
+  color: var(--ink-soft);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 999px;
+}
+
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 24px;
 }
 
@@ -591,8 +699,13 @@ footer {
   .stats,
   .skills-grid,
   .projects-grid,
+  .project-highlights,
   .contact-cards {
     grid-template-columns: 1fr;
+  }
+
+  .project-feature {
+    padding: 28px 22px;
   }
 }
 
