@@ -247,12 +247,57 @@
         </ul>
       </div>
 
-      <div class="projects-grid">
-        <div class="project-card">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
-          <h3>Project coming soon</h3>
-          <p>Details to follow</p>
+      <div class="project-feature">
+        <div class="project-feature-top">
+          <div class="project-feature-title-row">
+            <img class="project-icon" src="openstatus-icon.webp" alt="">
+            <div>
+              <h3>OpenStatus</h3>
+              <p class="project-tagline">An RPG where real habits level up your character</p>
+            </div>
+          </div>
+          <span class="project-badge">iOS &middot; SwiftUI</span>
         </div>
+        <p class="project-description">
+          OpenStatus is an iOS RPG built on real life: finishing a workout, a reading session, or
+          a focus block earns XP across three character aspects, levels up a persistent hero, and
+          unlocks classes, gear, and a full adventure world to explore. It's genuinely social too
+          &mdash; a Firebase-backed guild system lets up to 20 players cooperatively fight a shared
+          raid boss, fueled in part by real HealthKit step counts.
+        </p>
+        <ul class="project-highlights">
+          <li>
+            <strong>Real habits drive real combat stats.</strong> Ten interdependent RPG stats
+            feed 10+ combat formulas &mdash; attack power, dodge, crit, HP &mdash; derived directly
+            from tasks like workouts, journaling, and reading, not cosmetic skins on a to-do list.
+          </li>
+          <li>
+            <strong>Guild sync without trusting device clocks.</strong> A monotonic version
+            counter, not timestamps, resolves conflicts between devices, with the player profile
+            split across four independently-versioned Firestore documents to stay under the 1MB
+            doc limit.
+          </li>
+          <li>
+            <strong>HealthKit and EventKit, done correctly.</strong> Step counts fuel guild-boss
+            attacks and achievements; recurring quests mirror one-way into the native Calendar app.
+          </li>
+          <li>
+            <strong>Barcode scanning that means something.</strong> Scanning a book's ISBN via
+            VisionKit/AVFoundation pulls metadata from the Open Library API and, once read and
+            rated, awards real XP &mdash; connecting a physical action to in-game progress.
+          </li>
+          <li>
+            <strong>A streak system designed against guilt.</strong> A 2&ndash;3 day "welcome
+            back" check-in lets a broken streak continue instead of punishing a missed day &mdash;
+            an explicit, documented anti-shame design decision.
+          </li>
+        </ul>
+        <ul class="tech-tags">
+          <li>Swift</li><li>SwiftUI</li><li>Core Data</li><li>Firebase</li><li>Firestore</li><li>Firebase Auth</li><li>HealthKit</li><li>EventKit</li><li>VisionKit</li><li>AVFoundation</li><li>CryptoKit</li>
+        </ul>
+      </div>
+
+      <div class="projects-grid">
         <div class="project-card">
           <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
           <h3>Project coming soon</h3>
