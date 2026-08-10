@@ -1,267 +1,257 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>My Resume Website</title>
-  <style>
-    /* CSS styles for the layout */
-    body {
-      margin: 0;
-      padding: 0;
-    }
-
-    header {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background: #333;
-      color: #fff;
-      padding: 20px;
-    }
-
-    nav ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-    }
-
-    nav ul li {
-      display: inline;
-      margin-right: 20px;
-    }
-
-    nav ul li a {
-      color: #fff;
-      text-decoration: none;
-    }
-
-    nav ul li a:visited {
-      color: #fff;
-    }
-
-    main {
-      margin-top: 60px; /* Adjust margin-top to provide space for the fixed header */
-      padding: 20px;
-    }
-
-    .sidebar {
-      position: fixed;
-      background: #f1f1f1;
-      width: 200px;
-      float: left;
-    }
-
-    .sidebar ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-    }
-
-    .sidebar ul li {
-      margin-bottom: 10px;
-    }
-
-    .sidebar ul li a {
-      display: block;
-      color: #333;
-      padding: 10px;
-      text-decoration: none;
-    }
-
-    .sidebar ul li a:hover {
-      background: #ddd;
-    }
-
-    .content {
-      margin-left: 220px;
-      height: 100%;
-    }
-
-    .contactinfo {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .contactinfo ul li {
-      display:flex;
-      align-items:centered;
-      justify-content: center;
-    }
-
-    .contactinfo ul li h5 {
-      padding: 0px 0px 0px 20px;
-    }
-
-    .profile-photo {
-      width: 200px;
-      height: 200px;
-      border-radius: 50%;
-      border: 2px solid #333;
-      background-color: #ddd;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-    }
-
-    .profile-photo img {
-      max-width: 100%;
-      max-height: 100%;
-      object-fit: cover;
-    }
-  </style>
-  <script>
-    // JavaScript code to toggle section visibility
-    function showSection(sectionId) {
-      var sections = document.getElementsByTagName('section');
-      for (var i = 0; i < sections.length; i++) {
-        if (sections[i].id === sectionId) {
-          sections[i].style.display = 'block';
-        } else {
-          if (nonSubSections.indexOf(sections[i].id) > -1) {
-            sections[i].style.display = 'none';
-          }
-        }
-      }
-    }
-
-    const nonSubSections = ['about', 'projects', 'contact']
-
-    // JavaScript code to toggle subsection visibility
-    function showSubSection(subsectionId) {
-      var sections = document.getElementsByTagName('section');
-      for (var i = 0; i < sections.length; i ++) {
-        if (sections[i].id === subsectionId) {
-          sections[i].style.display = 'block';
-        } else {
-          if (nonSubSections.indexOf(sections[i].id) < 0) {
-            sections[i].style.display = 'none';
-          }
-        }
-      }
-    }
-  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Matthew McAuliffe | Software Engineer</title>
+  <meta name="description" content="Matthew McAuliffe — Software Engineer, client-facing technical delivery. Resume, skills, and projects.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="#" onclick="showSection('about')">About Me</a></li>
-        <li><a href="#" onclick="showSection('projects')">Projects</a></li>
-        <li><a href="#" onclick="showSection('contact')">Contact</a></li>
+
+  <header class="navbar">
+    <div class="wrap">
+      <a class="brand" href="#top">Matthew McAuliffe</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
-    </nav>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
   </header>
-  <main>
-    <section id="about">
-      <div class="sidebar">
-        <ul>
-          <li><a href="#" onclick="showSubSection('resume')">Resume</a></li>
-          <li><a href="#" onclick="showSubSection('skills')">Skills</a></li>
-          <li><a href="#" onclick="showSubSection('education')">Education</a></li>
-          <li><a href="#" onclick="showSubSection('interests')">Interests</a></li>
-          <li><a href="#" onclick="showSubSection('involvement')">Involvement</a></li>
-        </ul>
+
+  <section class="hero" id="top">
+    <div class="wrap">
+      <!-- Temporary photo — swap for a professional headshot when ready -->
+      <div class="avatar">
+        <img src="pfp.jpeg" alt="Matthew McAuliffe">
       </div>
-      <div class="content">
-        <section id="resume">
-              <embed src="Matt A McAuliffe Resume.pdf" width="100%" height="800px" type="application/pdf">
-        </section>
-        <section id="skills" style="display: none;">
-          <ul>
-            <li>
-              <ul>
-                <h3>Languages & Tools:</h3>
-                <h4>C</h4>
-                <h4>Python</h4>
-                <h4>Java</h4>
-                <h4>SQL</h4>
-                <h4>Bash</h4>
-                <h4>HTML</h4>
-              </ul>
-            </li>
-            <li>
-              <ul>
-                <h3>Cloud & Systems:</h3>
-                <h4>AWS APIs</h4>
-                <h4>Multi-Region Deployment Pipelines</h4>
-                <h4>Databases</h4>
-                <h4>Machine Learning</h4>
-                <h4>Web Development</h4>
-                <h4>Robotics</h4>
-              </ul>
-            </li>
-            <li>
-              <ul>
-                <h3>Client Delivery:</h3>
-                <h4>Technical Onboarding & Site Implementation</h4>
-                <h4>Solutions Consulting</h4>
-                <h4>Client Relationship Management</h4>
-                <h4>SOP Documentation</h4>
-                <h4>Salesforce Automation</h4>
-                <h4>Sales & Contract Creation</h4>
-              </ul>
-            </li>
+
+      <h1>Matthew A. McAuliffe</h1>
+      <p class="tagline">Software Engineer &middot; Client-Facing Technical Delivery</p>
+      <p class="summary">
+        Software engineer with hands-on production experience at AWS (Aurora PostgreSQL) and two years
+        embedded directly with enterprise clients, translating business requirements into technical
+        implementations. Skilled at owning the full arc from client problem to shipped solution &mdash;
+        scoping requirements, building and deploying custom configurations, and partnering with engineering
+        to resolve issues in production.
+      </p>
+
+      <div class="cta-row">
+        <a class="btn btn-primary" href="Matt A McAuliffe Resume.pdf" target="_blank" rel="noopener">View R&eacute;sum&eacute;</a>
+        <a class="btn btn-ghost" href="#contact">Get In Touch</a>
+      </div>
+
+      <div class="social-row">
+        <a href="mailto:mcauliffem@icloud.com" aria-label="Email">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/matthew-mcauliffe-878124217" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6Z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">About</span>
+        <h2>Bridging engineering and client outcomes</h2>
+        <p>Low-level systems experience paired with a track record of driving measurable business results.</p>
+      </div>
+      <p class="about-copy">
+        Combines low-level systems engineering (C, Python, Bash, AWS APIs) with a track record of managing
+        100+ client relationships and driving measurable business outcomes.
+      </p>
+      <div class="stats">
+        <div class="stat-card">
+          <div class="num">130+</div>
+          <div class="label">Enterprise accounts managed</div>
+        </div>
+        <div class="stat-card">
+          <div class="num">$250K</div>
+          <div class="label">Annual revenue driven</div>
+        </div>
+        <div class="stat-card">
+          <div class="num">3.9</div>
+          <div class="label">GPA &middot; Highest Honors</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="alt">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Skills</span>
+        <h2>Technical &amp; professional toolkit</h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <h3>Languages &amp; Tools</h3>
+          <ul class="pill-list">
+            <li>C</li><li>Python</li><li>Java</li><li>SQL</li><li>Bash</li><li>HTML</li>
           </ul>
-        </section>
-        <section id="education" style="display: none;">
-          <h3>Georgia Institute of Technology | Atlanta, GA</h3>
-          <h4>Bachelor of Science in Computer Science &mdash; Concentration in Intelligence and Devices</h4>
-          <h4>December 2019</h4>
-          <h4>GPA: 3.9 Overall / 4.0 Major &mdash; Highest Honors</h4>
-        </section>
-        <section id="interests" style="display: none;">
-          <!-- Content for the Interests section goes here -->
-        </section>
-        <section id="involvement" style="display: none;">
-          <!-- Content for the Involvement section goes here -->
-        </section>
+        </div>
+        <div class="skill-card">
+          <h3>Cloud &amp; Systems</h3>
+          <ul class="pill-list">
+            <li>AWS APIs</li><li>Multi-Region Deployment Pipelines</li><li>Databases</li><li>Machine Learning</li><li>Web Development</li><li>Robotics</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <h3>Client Delivery</h3>
+          <ul class="pill-list">
+            <li>Technical Onboarding &amp; Site Implementation</li><li>Solutions Consulting</li><li>Client Relationship Management</li><li>SOP Documentation</li><li>Salesforce Automation</li><li>Sales &amp; Contract Creation</li>
+          </ul>
+        </div>
       </div>
-    </section>
-    <section id="projects" style="display: none;">
-      <div class="sidebar">
-        <ul>
-          <li><a href="#" onclick="showSubSection('project1')">Project1</a></li>
-          <li><a href="#" onclick="showSubSection('project2')">Project2</a></li>
-          <li><a href="#" onclick="showSubSection('project3')">Project3</a></li>
-        </ul>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Experience</span>
+        <h2>Where I've worked</h2>
       </div>
-      <div class="content">
-        <section id="project1" style="display: none;">
-          <!-- Content for the Project1 section goes here -->
-        </section>
-        <section id="project2" style="display: none;">
-          <!-- Content for the Project2 section goes here -->
-        </section>
-        <section id="project3" style="display: none;">
-          <!-- Content for the Project3 section goes here -->
-        </section>
+      <div class="timeline">
+        <div class="timeline-entry">
+          <div class="timeline-head">
+            <h3>RealTime Reservation &middot; Remote</h3>
+            <span class="dates">2024 &ndash; Present</span>
+          </div>
+          <div class="role">
+            <h4>Client Success Associate</h4>
+            <ul>
+              <li>Serve as primary point of contact for 130+ enterprise accounts, translating client business requirements into product enhancement requests and coordinating delivery with engineering.</li>
+              <li>Drove $250K in annual incremental product revenue by identifying expansion opportunities and presenting data-backed quarterly business reviews to client stakeholders.</li>
+              <li>Identified underperforming clients and proactively drove action plans to improve trajectory and reduce client churn.</li>
+            </ul>
+          </div>
+          <div class="role">
+            <h4>Application Support Analyst</h4>
+            <ul>
+              <li>Triaged and resolved technical support cases tracked in YouTrack and Salesforce, partnering with engineering to escalate and remediate product defects.</li>
+              <li>Delivered client site-build implementations during onboarding and kept SOP documentation current with each new product release.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-entry">
+          <div class="timeline-head">
+            <h3>Amazon Web Services &middot; Seattle, WA</h3>
+            <span class="dates">2019 &ndash; 2022</span>
+          </div>
+          <div class="role">
+            <h4>Software Development Engineer I &mdash; AWS Aurora PostgreSQL</h4>
+            <ul>
+              <li>Designed and implemented a buffer cache eviction algorithm in C to reduce CPU clock cycles under heavy memory pressure, improving constrained database performance for AWS Aurora PostgreSQL.</li>
+              <li>Built automated test pipelines in Python and Bash utilizing AWS APIs to validate changes across multiple cloud regions in pre-production and production, following Agile design and code-review practices.</li>
+            </ul>
+          </div>
+          <div class="role">
+            <h4>Software Development Intern</h4>
+            <ul>
+              <li>Built and deployed internal tooling to monitor memory pressure, cache usage, and storage metrics within the database engine, logging data in a memory-efficient format to speed root-cause analysis of out-of-memory crashes.</li>
+            </ul>
+          </div>
+        </div>
       </div>
-    </section>
-    <section id="contact" style="display: none;">
-      <div class="contactinfo">
-        <ul>
-          <!-- Add a Photo of myself -->
-          <li><div class="profile-photo">
-            <!-- Placeholder content or actual photo goes here -->
-            <img src="pfp.jpeg" alt="Profile Photo">
-          </div></li>
-          <li><h2>Contact Me</h2></li>
-          <!-- Add a phone number -->
-          <li><h3>Phone Number:</h3>
-          <h5>+1(727)644-5049</h5></li>
-          <!-- Add an email address -->
-          <li><h3>Email Address:</h3>
-          <h5>mcauliffem@icloud.com</h5></li>
-          <!-- Add my LI link -->
-          <li><h3>LinkedIn:</h3>
-          <h5>https://www.linkedin.com/in/matthew-mcauliffe-878124217</h5></li>
-        </ul>
+    </div>
+  </section>
+
+  <section id="education" class="alt">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Education</span>
+        <h2>Academic background</h2>
       </div>
-    </section>
-  </main>
+      <div class="edu-card">
+        <h3>Georgia Institute of Technology &middot; Atlanta, GA</h3>
+        <div class="dates">December 2019</div>
+        <p>Bachelor of Science in Computer Science &mdash; Concentration in Intelligence and Devices</p>
+        <p>GPA: 3.9 Overall / 4.0 Major &mdash; Highest Honors</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Projects</span>
+        <h2>Side projects</h2>
+        <p>A few things I'm building outside of work &mdash; coming soon.</p>
+      </div>
+      <div class="projects-grid">
+        <div class="project-card">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+          <h3>Project coming soon</h3>
+          <p>Details to follow</p>
+        </div>
+        <div class="project-card">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+          <h3>Project coming soon</h3>
+          <p>Details to follow</p>
+        </div>
+        <div class="project-card">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+          <h3>Project coming soon</h3>
+          <p>Details to follow</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Contact</span>
+        <h2>Let's connect</h2>
+        <p>Open to new opportunities and conversations &mdash; reach out anytime.</p>
+      </div>
+      <div class="contact-cards">
+        <a class="contact-card" href="tel:+17276445049">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+          <div class="label">Phone</div>
+          <div class="value">727.644.5049</div>
+        </a>
+        <a class="contact-card" href="mailto:mcauliffem@icloud.com">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
+          <div class="label">Email</div>
+          <div class="value">mcauliffem@icloud.com</div>
+        </a>
+        <a class="contact-card" href="https://www.linkedin.com/in/matthew-mcauliffe-878124217" target="_blank" rel="noopener">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6Z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          <div class="label">LinkedIn</div>
+          <div class="value">matthew-mcauliffe</div>
+        </a>
+      </div>
+      <div class="contact-cta cta-row">
+        <a class="btn btn-primary" href="Matt A McAuliffe Resume.pdf" target="_blank" rel="noopener">Download R&eacute;sum&eacute;</a>
+        <a class="btn btn-ghost" href="contact.vcf">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M19 8v6M22 11h-6"/></svg>
+          Save Contact
+        </a>
+      </div>
+    </div>
+    <footer>
+      &copy; 2026 Matthew A. McAuliffe
+    </footer>
+  </section>
+
+  <script src="script.js"></script>
 </body>
 </html>
